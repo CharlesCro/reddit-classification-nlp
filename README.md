@@ -33,13 +33,13 @@ Websites such as Reddit which allow researchers/engineers to access the data of 
 
 ## Summary of Analysis:
 
-![word_count_graph](images\word_count_comparison.png)
+![word_count_graph](images/word_count_comparison.png)
 
 
 In comparing the subreddits r/Showerthoughts and r/Philosophy, both exhibit similar averages in post title length. However, the distribution of these lengths shows that r/Showerthoughts tends to have longer post titles more frequently. Additionally, at first glance, the vocabulary of r/Philosophy appears more serious, while r/Showerthoughts often takes on a more uncertain, curious tone. This is reflected in the most common words found in each subreddit: r/Showerthoughts frequently uses words like "future," "AI," "like," and "probably," indicating a speculative tone, while r/Philosophy sees terms like "moral," "philosophy," "Nietzsche" and "consciousness," pointing to more formal philosophical discourse.
 
 
-![top_words_chart](images\top_words_by_subreddit.png)
+![top_words_chart](images/top_words_by_subreddit.png)
 
 From these observations, I revisited my problem statement: Is there a difference between self-made observations and those made by established philosophers? A key hypothesis is that while both subreddits explore similar topics (such as life, knowledge, and humanity), self-made observations (e.g., r/Showerthoughts) often come across as less certain and confident compared to those from professional philosophers (e.g., r/Philosophy).
 
@@ -47,7 +47,7 @@ To further explore these differences, I developed and evaluated several models. 
 
 Given that neither false positives nor false negatives hold particular preference in this problem, I did not prioritize precision or recall. Instead, my focus remains on overall accuracy and performance across the models.
 
-![model_accuracy_graph](images\model_accuracies.png)
+![model_accuracy_graph](images/model_accuracies.png)
 
 
 Assessing the metrics of each model, the Naive Bayes method seems to have remedied some high variance, as it managed to shorten the gap in train/test scores the most. This Naive Bayes model, proving to generalize to new unseen data the best, is what I chose to push forward as my production model.
