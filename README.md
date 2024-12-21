@@ -1,16 +1,16 @@
 ### Project 3: Web APIs & NLP by Charles Crocicchia
 
 ## Problem Statement:
-I work for a linguistic research team whose goal is to visualize patterns or trends in the rapidly developing language of the online world. In this day and age, where discussions take place more and more in the digital format, my team hopes to take advantage of the vast amount of data available online regarding how people use language. Specifically, our domain of research will be focused on observing the social and cultural language trends of the popular online community Reddit.
+My goal is to visualize patterns or trends in the rapidly developing language of the online world. In this day and age, where discussions take place more and more in the digital format, I hope to take advantage of the vast amount of data available online regarding how people use language. Specifically, my domain of research will be focused on observing the social and cultural language trends of the popular online community **Reddit**.
 
-- r/philosophy is a Reddit fourm where people share and discuss morals, ethics, and social observations made by prominent figures in the philosophical research community.
-- r/showerthoughts is a Reddit forum where people voice their realizations or epiphanies that they have discovered independently of academic/scientific research.
+- `r/philosophy` is a fourm where people share and discuss morals, ethics, and social observations made by prominent figures in the philosophical research community.
+- `r/showerthoughts` is a forum where people voice their realizations or epiphanies that they have discovered independently of academic/scientific research.
 
-With the language data of these two Reddit forums at my research team's disposal, the question we hope to answer is:
-- Is there a difference between our own self-made observations and those made by established philosophers?
+With the language data of these two **Reddit** forums at my disposal, the question I hope to answer is:
+- **Is there a difference between our own self-made observations and those made by established philosophers?**
 
-Over the course of two weeks my team will collect the language used by both of these subreddits and process the data in order to effectively visualize potential patterns of speech.
-Using these findings, we hope to deliver a model which accurately identifies the subreddit in which a piece of language was taken from.
+I will scrape the new posts (via the `Reddit API` and `Python` scripting) to create a data set that will allow me to effectively visualize potential patterns of speech.
+I hope to deliver a **classification** model which accurately identifies the subreddit in which a piece of language was taken from. I will evaluate several types of classification models based on a variety of metrics, with a focus on high **accuracy** (*above 85%*). 
 
 
 ## Background:
@@ -33,13 +33,22 @@ Websites such as Reddit which allow researchers/engineers to access the data of 
 
 ## Summary of Analysis:
 
+![word_count_graph](images\word_count_comparison.png)
+
+
 In comparing the subreddits r/Showerthoughts and r/Philosophy, both exhibit similar averages in post title length. However, the distribution of these lengths shows that r/Showerthoughts tends to have longer post titles more frequently. Additionally, at first glance, the vocabulary of r/Philosophy appears more serious, while r/Showerthoughts often takes on a more uncertain, curious tone. This is reflected in the most common words found in each subreddit: r/Showerthoughts frequently uses words like "future," "AI," "like," and "probably," indicating a speculative tone, while r/Philosophy sees terms like "moral," "philosophy," "Nietzsche" and "consciousness," pointing to more formal philosophical discourse.
+
+
+![top_words_chart](images\top_words_by_subreddit.png)
 
 From these observations, I revisited my problem statement: Is there a difference between self-made observations and those made by established philosophers? A key hypothesis is that while both subreddits explore similar topics (such as life, knowledge, and humanity), self-made observations (e.g., r/Showerthoughts) often come across as less certain and confident compared to those from professional philosophers (e.g., r/Philosophy).
 
 To further explore these differences, I developed and evaluated several models. A baseline accuracy of around 57% was established by always guessing the majority class (r/Showerthoughts). Improving upon this baseline is crucial for the models to be useful. Interestingly, despite training the Random Forest model in line with previous models, it tested slightly worse, with more false positives. This was unexpected, as Random Forest is typically effective at reducing variance and lessening the difference between train and test scores.
 
 Given that neither false positives nor false negatives hold particular preference in this problem, I did not prioritize precision or recall. Instead, my focus remains on overall accuracy and performance across the models.
+
+![model_accuracy_graph](images\model_accuracies.png)
+
 
 Assessing the metrics of each model, the Naive Bayes method seems to have remedied some high variance, as it managed to shorten the gap in train/test scores the most. This Naive Bayes model, proving to generalize to new unseen data the best, is what I chose to push forward as my production model.
 
