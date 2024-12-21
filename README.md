@@ -1,4 +1,4 @@
-### Project 3: Web APIs & NLP by Charles Crocicchia
+Web APIs & NLP by Charles Crocicchia
 
 ## Problem Statement:
 My goal is to visualize patterns or trends in the rapidly developing language of the online world. In this day and age, where discussions take place more and more in the digital format, I hope to take advantage of the vast amount of data available online regarding how people use language. Specifically, my domain of research will be focused on observing the social and cultural language trends of the popular online community **Reddit**.
