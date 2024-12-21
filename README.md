@@ -61,6 +61,15 @@ I would love to explore the statistics and trends of specific phrases, instead o
 I would expect as we increased the data for our models to be trained on by more than just the two subreddits, our models could perform worse and the distinction in language might be harder to spot. But in time as research on phrases/slang increases perhaps our models would bounce back as we identify and create features which stand out in these two classes (self-made observations & professional philosophy).
 
 
+## Software
+- Pandas
+- NumPy
+- NLTK
+- Matplotlib
+- SciKit-Learn
+- Requests
+
+
 
 
 
